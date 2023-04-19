@@ -428,6 +428,8 @@ class Player(discord.VoiceProtocol):
 
         self._player_state['track'] = resp['track']['encoded']
         self.queue._loaded = track
+        
+        self._paused = False
 
         return track
 
