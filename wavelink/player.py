@@ -336,7 +336,7 @@ class Player(discord.VoiceProtocol):
 
         await self.channel.guild.change_voice_state(channel=self.channel, **kwargs)
 
-    async def move_to(self, channel: discord.VoiceChannel, self_mute: bool = False, self_deaf: bool = False) -> None:
+    async def move_to(self, channel: discord.VoiceChannel, *, self_mute: bool = False, self_deaf: bool = False) -> None:
         """|coro|
 
         Moves the player to a different voice channel.
